@@ -34,20 +34,23 @@ var server = http.createServer(function(request, response){
   console.log('方方说：得到 HTTP 路径\n' + path)
   // console.log('方方说：查询字符串为\n' + query)
   // console.log('方方说：不含查询字符串的路径为\n' + pathNoQuery)
-  if(path  == '/style'){
+  if(path  == '/style.css'){
     response.setHeader('Content-Type','text/css;charset=utf-8')
     response.write('body{background-color:red;}h1{color:green;}')
      response.end()
   }
-  else if(path == '/js'){    
+  else if(path == '/main.js'){    
     response.setHeader('Content-Type','text/script;charset=utf-8')
     response.write('alert("这是一个JS命令")')
     response.end()
   }
 
-  else if(path == '/index'){
+  else if(path == '/'){
     response.setHeader('Content-Type','text/html;charset=utf-8')
     response.write('<!DOCTYPE><html><head><link rel="stylesheet" href="/style"><body><h1>Hello 世界</h1><script src="/js"></script></body></head></html>')
+    response.end()
+  }else{
+    response.statusCode = 404
     response.end()
   }
 
