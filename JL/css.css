@@ -1,0 +1,60 @@
+body,ol,ul,li{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(239, 239, 239);
+}
+.banner{
+    position: relative;
+    height: 518px;
+    background-color:rgba(0, 140, 255, 0.747);
+    background: url(2.jpg) -300px -400px;
+}
+.logo{
+    position: absolute;
+    top:34px;
+    left:184px;
+}
+.logo .rs{
+    color: rgb(232,103,107);
+    margin: 0 6px;
+}
+.logo .cd{
+    color:rgb(154,167,152);
+}
+.logo a{
+    text-decoration:none;
+    font:700 26px "Hobo Std";
+    color:rgb(181,184,187);
+}
+.nav{
+    height: 170px;
+}
+.nav ul{
+    list-style: none;
+    position: absolute;
+    right: 350px;
+    top:16px;
+}
+.nav ul li{
+    float: left;
+}
+.nav ul li a{
+    display: inline-block;
+    text-decoration: none;
+    margin: 10px 17px;
+    padding: 10px 0;
+    font:700 13px "Open Sans";
+    color:rgb(181,184,187)
+}
+.nav ul li a:hover{
+    border-bottom: 3px solid #fa6c6c
+}
+/* 导航结束 */
+.card{
+    margin:0 auto;
+    background-color: rgba(255, 255, 255,1);
+    width: 930px;
+    height: 528px;
+}
