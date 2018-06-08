@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+    body{
+        background-color:rgb(239,239,239);
+        
+    }
+        .yy{   
+            margin:0 auto;
+            position: relative;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(to bottom, #ffffff 0%,#ffffff 50%,#0a0e0a 51%,#0a0809 100%);
+            animation-duration: 3s;
+            animation-name: spin;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+
+        }
+        .yy::before{
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #fff;
+            margin-top: 25px;
+            border:20px solid #000;
+        }
+        .yy::after{
+            content: "";
+            position: absolute;
+            top: 25px;
+            left: 50px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #000;
+            border:20px solid #fff;
+        }
+        @keyframes spin {
+                from {
+                    transform: rotate(0deg);
+                }
+
+                to {
+                    transform: rotate(360deg);
+                }
+        }      
+    </style>
+</head>
+<body>
+    <div class="yy">
+    </div>
+</body>
+</html>
