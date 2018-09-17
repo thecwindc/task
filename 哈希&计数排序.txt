@@ -1,0 +1,37 @@
+a <- {
+    '0':0,
+    '1':2,
+    '2':1,
+    '3':56,
+    '4':4,
+    '5':67,
+    '6':3,
+    'length':7,
+    }
+hash <- {}
+index <- 0
+while{index < a['length']}
+    number = a[index] //number是a里面Index的值
+    if hash[number] == undefined  //如果在哈希这个桶里面找不到number的数字
+        hash[number] = 1
+    else
+        hash[number] <- hash[number]+1
+    end
+    index <- index+1
+end
+
+index2 <- 0
+max <- findMax(a)
+newArr <- {}
+while(index2 < max+1) //or while(index2 <= max)， max相当于哈希桶里的length，length=哈希桶里最大的数+1
+    count = hash[index2]
+    if count != undefined
+        countIndex=0
+        while(countIndex < count)
+        newArr.push(index2)
+        countIndex <- countIndex+1
+        end
+    end
+    index2 <- index2 + 1
+end
+print newArr
